@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>piepserFuerGaybel.wav</file>
+    </qresource>
+</RCC>

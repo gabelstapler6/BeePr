@@ -36,18 +36,21 @@ Window {
             id: first
             Layout.fillWidth: true
             defaultValue: [3, 0, "sec"]
+            enabled: slider.value === 0
         }
 
         BeePrInterval {
             id: second
             Layout.fillWidth: true
             defaultValue: [0, 3, "min"]
+            enabled: slider.value === 1
         }
 
         BeePrInterval {
             id: third
             Layout.fillWidth: true
             defaultValue: [0, 5, "min"]
+            enabled: slider.value === 2
         }
     }
 

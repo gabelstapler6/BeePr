@@ -38,33 +38,33 @@ Item {
         id: row
         anchors.centerIn: parent
         
-        Tumbler {
-            id: tens
-            width: selector.width/3
-            height: selector.height
-            model: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-            delegate: delegateComponent
-            currentIndex: defaultValue[0]
-        }
+            Tumbler {
+                id: tens
+                width: selector.width/3
+                height: selector.height
+                model: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                delegate: delegateComponent
+                currentIndex: defaultValue[0]
+            }
 
-        Tumbler {
-            id: nums
-            width: selector.width/3
-            height: selector.height
-            model: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-            delegate: delegateComponent
-            currentIndex: defaultValue[1]
-        }
+            Tumbler {
+                id: nums
+                width: selector.width/3
+                height: selector.height
+                model: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                delegate: delegateComponent
+                currentIndex: defaultValue[1]
+            }
 
-        Tumbler {
-            id: durs
-            width: selector.width/3
-            height: selector.height
-            model: ["sec", "min"]
-            delegate: delegateComponent
-            currentIndex: model.indexOf(defaultValue[2])
+            Tumbler {
+                id: durs
+                width: selector.width/3
+                height: selector.height
+                model: ["sec", "min"]
+                delegate: delegateComponent
+                currentIndex: model.indexOf(defaultValue[2])
+            }
         }
-    }
     }
 
     
@@ -90,7 +90,7 @@ Item {
     }
 
     Timer {
-        interval: value*100
+        interval: value*1000
         repeat: true
         running: enabled
         onTriggered: {
@@ -100,6 +100,7 @@ Item {
 
     SoundEffect {
         id: beePr
+        source: "piepserFuerGaybel.wav"
     }
     
 }
