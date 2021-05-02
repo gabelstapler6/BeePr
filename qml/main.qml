@@ -9,6 +9,7 @@ Window {
     visible: true
     title: qsTr("BeePr")
 
+    property var beePrs: [first, second, third]
     
     Rectangle {
         id: bg
@@ -18,9 +19,18 @@ Window {
 
     Text {
         id: currentIntervalText
-        text: "10"
+        text: {
+            let val = beePrs[slider.value]._value
+            return String(val[0]) + String(val[1]) + " " + val[2]
+        }
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: intervalRow.top
+        anchors.top: parent.top
+
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+
+        font.pointSize: 36
     }
 
     RowLayout {
