@@ -4,17 +4,20 @@ import QtQuick.Controls 2.15
  import QtQuick.Layouts 1.15
 
 Window {
+    id: root
     width: 720
     height: 1280
     visible: true
     title: qsTr("BeePr")
+
+    property color topColor: "#C4C4C4"
 
     property var beePrs: [first, second, third]
     
     Rectangle {
         id: bg
         anchors.fill: parent
-        color: "gray"
+        color: "#242325"
     }
 
     Text {
@@ -23,6 +26,7 @@ Window {
             let val = beePrs[slider.value]._value
             return String(val[0]) + String(val[1]) + " " + val[2]
         }
+        color: topColor
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: intervalRow.top
         anchors.top: parent.top
@@ -31,6 +35,8 @@ Window {
         verticalAlignment: Text.AlignVCenter
 
         font.pointSize: 36
+        font.family: "Helvetica"
+        font.bold: true
     }
 
     RowLayout {
@@ -76,7 +82,7 @@ Window {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
-        anchors.verticalCenterOffset: first.height/2
+        anchors.verticalCenterOffset: first.height/3
         anchors.leftMargin: first.width/2
         anchors.rightMargin: first.width/2
     }

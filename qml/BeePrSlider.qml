@@ -13,14 +13,7 @@ Slider {
         width: control.availableWidth
         height: implicitHeight
         radius: 2
-        color: "#bdbebf"
-
-        Rectangle {
-            width: control.visualPosition * parent.width
-            height: parent.height
-            color: "#bdbebf"
-            radius: 2
-        }
+        color: "#4E4E4E"
     }
 
     handle: Rectangle {
@@ -29,7 +22,7 @@ Slider {
         implicitWidth: 36
         implicitHeight: 36
         radius: 18
-        color: control.pressed ? "#f0f0f0" : "#f6f6f6"
+        color: control.pressed ? topColor : topColor
         border.color: "#bdbebf"
     }
 }

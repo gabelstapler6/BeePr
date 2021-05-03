@@ -11,6 +11,10 @@ Item {
     property var defaultValue: [1,0,"sec"] // tumbler values
 
     property var enabled: false
+    
+    
+    signal remaining(string text)
+    
 
     width: 100
     height: 200
@@ -23,17 +27,24 @@ Item {
             opacity: 1.0 - Math.abs(Tumbler.displacement) / (visibleItemCount / 2)
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            font.pixelSize: 18
-            color: "white"
+            font.pointSize: 14
+            font.family: "Helvetica"
+            color: topColor
         }
     }
 
     Rectangle {
         id: frame
-        color: "steelblue"
+        color: "#A73A3A"
         anchors.fill: parent
-        radius: 12
-        // anchors.margins: 14
+        radius: 20
+
+        Rectangle {
+            anchors.fill: parent
+            color: "#8F3333"
+            radius: 62
+        }        
+
         Row {
         id: row
         anchors.centerIn: parent
