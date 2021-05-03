@@ -36,6 +36,7 @@ Window {
     RowLayout {
         id: intervalRow
         anchors.bottom: slider.top
+        anchors.bottomMargin: 16
         anchors.left: parent.left
         anchors.leftMargin: 18
         anchors.right: parent.right
@@ -75,6 +76,7 @@ Window {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: first.height/2
         anchors.leftMargin: first.width/2
         anchors.rightMargin: first.width/2
     }
