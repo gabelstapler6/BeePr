@@ -10,7 +10,7 @@ Window {
     visible: true
     title: qsTr("BeePr")
 
-    property color topColor: "#C4C4C4"
+    property color topColor: "#FFFFFF"
 
     property var beePrs: [first, second, third]
     
@@ -76,7 +76,7 @@ Window {
         id: slider
         from: 0
         to: 2
-        snapMode: Slider.SnapAlways
+        snapMode: Slider.SnapOnRelease
         stepSize: 1
 
         anchors.left: parent.left

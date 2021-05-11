@@ -17,7 +17,7 @@ Item {
     
 
     width: 100
-    height: 200
+    height: 160
 
     Component {
         id: delegateComponent
@@ -27,7 +27,7 @@ Item {
             opacity: 1.0 - Math.abs(Tumbler.displacement) / (visibleItemCount / 2)
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            font.pointSize: 14
+            font.pointSize: 18
             font.family: "Helvetica"
             color: topColor
         }
@@ -35,13 +35,13 @@ Item {
 
     Rectangle {
         id: frame
-        color: "#A73A3A"
+        color: "#C84343"
         anchors.fill: parent
         radius: 20
 
         Rectangle {
             anchors.fill: parent
-            color: "#8F3333"
+            color: "#AC3B3B"
             radius: 62
         }        
 
