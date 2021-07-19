@@ -1,0 +1,6 @@
+﻿---
+BasedOnStyle: Microsoft
+BreakConstructorInitializers: BeforeComma
+NamespaceIndentation: All
+
+...
